@@ -1,0 +1,4 @@
+{
+  "connectionString": "mongodb://localhost:27017/live-chat",
+  "secret": "b2qma75NgyEkZYKmmj1Yjpt8uHTfQz8MsDIwdur1Fmc="
+}
