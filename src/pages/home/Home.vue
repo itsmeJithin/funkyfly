@@ -30,7 +30,7 @@
     },
     mounted () {
       let self=this;
-      self.changeChatBox()
+      self.changeChatBox();
       self.$store
         .dispatch('validateLoginToken')
         .then(function (response) {

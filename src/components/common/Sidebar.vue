@@ -82,10 +82,10 @@
     },
     methods: {
       startChatWith: function (userId, socketId) {
-        this.$router.push({name: 'Home', params: {uid: userId, socketId: socketId}})
+        this.$router.replace({name: 'Home', params: {uid: userId, socketId: socketId}})
       },
       getAllUsers () {
-        let self = this
+        let self = this;
         SidebarService.getAllUsers()
           .then(function (response) {
             self.availableUsers = response.data
