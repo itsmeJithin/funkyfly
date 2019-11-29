@@ -39,11 +39,10 @@ io.on('connection', function (socket) {
 
   console.log('Socket Connection Established with ID :' + socket.id);
   socket.on('makeMeOnline', function (user, callback) {
-    let temp = 0;
     user.socketId = socket.id;
     onlineUsers.push(user);
     io.sockets.emit('connectedUsers', onlineUsers)
-  })
+  });
   socket.on('disconnect', function () {
     let i = 0;
     while (i < onlineUsers.length) {
