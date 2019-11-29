@@ -19,7 +19,7 @@ async function authenticate ({username, password}) {
     const {password, ...userWithoutHash} = user.toObject()
     const token = jwt.sign({sub: user.id}, config.secret, {
       expiresIn: 86400 // expires in 24 hours
-    })
+    });
     return {
       ...userWithoutHash,
       token

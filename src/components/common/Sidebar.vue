@@ -98,6 +98,7 @@
           })
       },
       filterOnlineUsers (onlineUsers) {
+        console.log(onlineUsers);
         this.availableUsers = _.differenceBy(this.availableUsers, onlineUsers, '_id')
         let loggedInUser = store.state.user
         //Removing myself from the online users
